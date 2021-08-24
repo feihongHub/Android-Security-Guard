@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:id="@+id/lv_virusscan"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/blue" >
+        <ImageView 
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/virusscan_icon"
+            />
+        <TextView 
+            android:id="@+id/tv_lastscantime"
+            style="@style/textView16sp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            
+           />
+
+        <!-- <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+            <ImageView
+                android:id="@+id/ic_virscanner"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/ic_scanner_malware" />
+            <ImageView
+                android:id="@+id/ic_scanning"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/act_scanning_03" />
+        </FrameLayout> -->
+    </RelativeLayout>
+    <RelativeLayout 
+        android:id="@+id/rl_allscanvirus"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <ImageView 
+            android:id="@+id/imgv_quickscan"
+            style="@style/wrapcontent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/imgv_quickscan_icon"
+            />
+        <TextView 
+            android:id="@+id/tv_allscan"
+            style="@style/textView16sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/imgv_quickscan"
+            android:text="全盘扫描"/>
+        <TextView 
+            style="@style/TextView14sp"
+            android:layout_below="@id/tv_allscan"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/imgv_quickscan"
+            android:text="全面扫描手机,杀毒更彻底"/>
+        <View 
+            android:layout_width="13dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/arrow_right"
+            />
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="1.0px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black"/>
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/rl_aboutVirus"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <ImageView 
+            android:id="@+id/imgv_usmessage"
+            style="@style/wrapcontent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_launcher"
+            />
+        <TextView 
+            android:id="@+id/tv_usmessage"
+            style="@style/textView16sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/imgv_usmessage"
+            android:text="关于病毒"/>
+        <TextView 
+            style="@style/TextView14sp"
+            android:layout_below="@id/tv_usmessage"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/imgv_usmessage"
+            android:text="手机病毒讲解"/>
+        <ImageView 
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/title_down"
+            />
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="1.0px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black"/>
+    </RelativeLayout>
+
+</LinearLayout>

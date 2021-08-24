@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/showitum_image"
+        android:layout_width="30dp"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/showitem_appname"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/showitum_image" />
+
+    <TextView
+        android:id="@+id/showitem_rxdata"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/showitem_appname" />
+
+    <TextView
+        android:id="@+id/showitem_txdata"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/showitem_rxdata" />
+
+    <TextView
+        android:id="@+id/showitem_totaldata"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/showitem_txdata" />
+
+</RelativeLayout>

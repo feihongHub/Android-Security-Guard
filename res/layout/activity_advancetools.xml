@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom_android="http://schemas.android.com/apk/res/com.graduate.phonesafeguard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include layout="@layout/titlebar"/>
+	<com.graduate.phonesafeguard.chapter09.widget.AdvancedToolView 
+	    android:id="@+id/advanceview_numbelongs"
+	    android:layout_width="match_parent"
+	    android:layout_height="55dp"
+	   	custom_android:desc="号码归属地查询"
+	   	android:gravity="center_vertical"
+	   	android:src="@drawable/numofbelongto"
+	    />
+	<com.graduate.phonesafeguard.chapter09.widget.AdvancedToolView 
+	    
+	    android:id="@+id/advanceview_numbesearch"
+	    android:layout_width="match_parent"
+	    android:layout_height="55dp"
+	   	custom_android:desc="常用号码查询"
+	   	android:gravity="center_vertical"
+	   	android:src="@drawable/numofsearch"
+	    />
+	<com.graduate.phonesafeguard.chapter09.widget.AdvancedToolView 
+	    android:id="@+id/advanceview_smsbackup"
+	    android:layout_width="match_parent"
+	    android:layout_height="55dp"
+	   	custom_android:desc="短信备份"
+	   	android:gravity="center_vertical"
+	   	android:src="@drawable/sms_backup"
+	    />
+	<com.graduate.phonesafeguard.chapter09.widget.AdvancedToolView 
+	    android:id="@+id/advanceview_smsreduction"
+	    android:layout_width="match_parent"
+	    android:layout_height="55dp"
+	   	custom_android:desc="短信还原"
+	   	android:gravity="center_vertical"
+	   	android:src="@drawable/sms_reduction"
+	    />
+	<com.graduate.phonesafeguard.chapter09.widget.AdvancedToolView 
+	    android:id="@+id/advanceview_applock"
+	    android:layout_width="match_parent"
+	    android:layout_height="55dp"
+	   	custom_android:desc="程序锁"
+	   	android:gravity="center_vertical"
+	   	android:src="@drawable/programoflock_icon"
+	    />
+</LinearLayout>

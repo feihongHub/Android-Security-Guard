@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- package="com.graduate.phonesafeguard" -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.graduate.phonesafeguard"
+    
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <!-- 毕业设计 -->
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.graduate.phonesafeguard" >
+    </instrumentation>
+ 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name="com.graduate.phonesafeguard.chapter02.App"
+        android:allowBackup="true"
+        android:icon="@drawable/project_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+        
+        <!-- startApp -->
+        <activity
+            android:name="com.startapp.android.publish.list3d.List3DActivity"
+            android:theme="@android:style/Theme" />
+        <activity
+            android:name="com.startapp.android.publish.OverlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.startapp.android.publish.FullScreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme" />
+
+        <activity
+            android:name="com.graduate.phonesafeguard.chapter01.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        
+        
+        <activity android:name="com.graduate.phonesafeguard.chapter01.PreActivity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.HomeActivity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter02.LostFindActivity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter02.SetUp1Activity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter02.SetUp2Activity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter02.SetUp3Activity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter02.SetUp4Activity" >
+        </activity>
+
+        <receiver android:name="com.graduate.phonesafeguard.chapter02.receiver.SmsLostFindReceiver" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                <action android:name="android.provider.Telephony.SMS_DELIVER" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.graduate.phonesafeguard.chapter02.ContactSelectActivity" >
+        </activity>
+
+        <receiver android:name="com.graduate.phonesafeguard.chapter02.receiver.BootCompleteReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.graduate.phonesafeguard.chapter02.receiver.MyDeviceAdminReceiver"
+            android:description="@string/description"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.graduate.phonesafeguard.chapter02.service.GPSLocationService"
+            android:persistent="true" >
+        </service>
+
+        <activity android:name="com.graduate.phonesafeguard.chapter03.AddBlackNumberActivity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter03.SecurityPhoneActivity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter03.ContactSelectActivity" >
+        </activity>
+
+        <service android:name="com.graduate.phonesafeguard.chapter03.service.BlacknumberControlService" >
+        </service>
+
+        <activity android:name="com.graduate.phonesafeguard.chapter04.APPManagerActivity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter05.VirusScanActivity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter05.VirusScanSpeedActivity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter06.CacheClearListActivity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter06.CleanCacheActivity" >
+        </activity>
+        <activity
+            android:name="com.graduate.phonesafeguard.chapter07.ProcessManagerActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter07.ProcessManagerSettingActivity" >
+        </activity>
+
+        <service
+            android:name="com.graduate.phonesafeguard.chapter07.service.AutoKillProcessService"
+            android:persistent="true" >
+        </service>
+
+        <activity android:name="com.graduate.phonesafeguard.chapter08.TrafficMonitoringActivity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter08.TrafficDataShowActivity" >
+        </activity>
+
+        <receiver android:name="com.graduate.phonesafeguard.chapter08.receiver.MyReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.graduate.phonesafeguard.chapter09.AdvanceToolsActivity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter09.NumBelongtoActivity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter09.NumbesearchActivity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter09.SMSBackupActivity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter09.SMSReductionActivity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter09.AppLockActivity" >
+        </activity>
+        <activity
+            android:name="com.graduate.phonesafeguard.chapter09.EnterPswActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance" >
+        </activity>
+
+        <service android:name="com.graduate.phonesafeguard.chapter09.service.AddressService" >
+        </service>
+        <service
+            android:name="com.graduate.phonesafeguard.chapter09.service.AppLockService"
+            android:persistent="true" >
+        </service>
+        <!-- <service android:name="com.graduate.phonesafeguard.chapter09.service.BlackNumberService"></service> -->
+        <activity
+            android:name="com.graduate.phonesafeguard.chapter09.DragViewActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter10.SettingsActivity" >
+        </activity>
+        <activity android:name="com.graduate.phonesafeguard.chapter11.BatteryObserveActivity">
+        </activity>
+        <service android:name="com.graduate.phonesafeguard.chapter11.service.OpenBatteryService"></service>
+        <activity
+            android:name="com.zbar.lib.CaptureActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>

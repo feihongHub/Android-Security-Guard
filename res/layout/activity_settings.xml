@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:itcase="http://schemas.android.com/apk/res/com.graduate.phonesafeguard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+    <com.graduate.phonesafeguard.chapter10.widget.SettingView 
+        android:id="@+id/setting_update"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+       	itcase:settitle="自动更新设置"
+       	itcase:status_on="自动更新已开启"
+       	itcase:status_off="自动更新已关闭"
+       	
+        />
+    <com.graduate.phonesafeguard.chapter10.widget.SettingView 
+        android:id="@+id/setting_address"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+       	itcase:settitle="电话归属地设置"
+       	itcase:status_on="电话归属地已开启"
+       	itcase:status_off="电话归属地已关闭"
+        />
+    <com.graduate.phonesafeguard.chapter10.widget.SettingClickView 
+        android:id="@+id/setting_style"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        />
+    <com.graduate.phonesafeguard.chapter10.widget.SettingClickView 
+        android:id="@+id/setting_location"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        />
+    <com.graduate.phonesafeguard.chapter10.widget.SettingView 
+        android:id="@+id/setting_blacknamenumber"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+       	itcase:settitle="黑名单拦截设置"
+       	itcase:status_on="拦截功能已启动"
+       	itcase:status_off="拦截功能已关闭"
+        />
+    <com.graduate.phonesafeguard.chapter10.widget.SettingView 
+        android:id="@+id/setting_applock_set"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+       	itcase:settitle="程序锁设置"
+       	itcase:status_on="程序锁已启动"
+       	itcase:status_off="程序锁已关闭"
+        />
+
+    <!-- <com.graduate.phonesafeguard.chapter10.widget.SettingView
+        android:id="@+id/sv_blacknumber_set"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        itcast:settitle="黑名单拦截设置"
+        itcast:status_off="黑名单拦截已关闭"
+        itcast:status_on="黑名单拦截已开启" />
+
+    <com.graduate.phonesafeguard.chapter10.widget.SettingView
+        android:id="@+id/sv_applock_set"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        itcast:settitle="程序锁设置"
+        itcast:status_off="程序锁已关闭"
+        itcast:status_on="程序锁已开启" /> -->
+    <!-- 测试 -->
+
+    
+
+</LinearLayout>

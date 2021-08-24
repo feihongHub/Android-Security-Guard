@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#a000" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/call_locate_blue"
+        android:text="按住提示框到任意位置\n按手机返回键立即生效"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/call_locate_blue"
+        android:text="按住提示框到任意位置\n按手机返回键立即生效"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:gravity="center" 
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/tv_locationset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@android:drawable/ic_menu_call"
+        android:layout_marginTop="90dp"
+        android:text="双击居中"
+        android:gravity="center"
+        android:background="@drawable/call_locate_blue" />
+
+</RelativeLayout>
